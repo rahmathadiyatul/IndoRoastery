@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">New Roastery</h1>
+        <div class="col-6 offset-3">
+            <form action="/roasters" method="POST" novalidate class="form-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="nama">Nama</label>
+                    <input class="form-control" type="text" id="nama" name="roastery[nama]" required>
+                    <div class="valid-feedback">
+                        Keren!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="lokasi">Lokasi</label>
+                    <input class="form-control" type="text" id="lokasi" name="roastery[lokasi]" required>
+                    <div class="valid-feedback">
+                        Keren!
+                    </div>
+                </div>
+                <!-- <div class="mb-3">
+                    <label class="form-label" for="gambar">URL Gambar</label>
+                    <input class="form-control" type="text" id="gambar" name="roastery[gambar]" required>
+                    <div class="valid-feedback">
+                        Keren!
+                    </div>
+                </div> -->
+                <div class="mb-3">
+                    <label class="form-label" for="harga">Harga Houseblend</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="harga-label">Rp</span>
+                        <input type="text" class="form-control" id="harga" placeholder="0" aria-label="Harga"
+                            aria-describedby="harga-label" name="roastery[harga]" required>
+                        <div class="valid-feedback">
+                            Keren!
+                        </div>
+                    </div>
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" for="deskripsi">Deskripsi</label>
+                    <textarea class="form-control" type="text" id="deskripsi" name="roastery[deskripsi]"
+                        required></textarea>
+                    <div class="valid-feedback">
+                        Keren!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="gambar" class="form-label">Unggah Gambar</label>
+                    <input class="form-control" type="file" id="gambar" name="gambar" multiple>
+                </div>
+                <div class="mb-3"> <button class="btn btn-primary">Add Roastery</button>
+                </div>
+            </form>
+            <a href="/roasters">Cancel</a>
+        </div>
+    </div>

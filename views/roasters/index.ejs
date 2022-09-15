@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate') %>
+    <div id="mapCluster" style="width: 100%; height: 500px "></div>
+    <h1>All Roasteries</h1>
+    <div>
+        <a href="/roasters/new">Add New Roastery</a>
+    </div>
+    <% for (let roastery of roasteries){ %>
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="<%=roastery.gambar[0].url%>" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%=roastery.nama%>
+                        </h5>
+                        <p class="card-text">
+                            <%=roastery.deskripsi%>
+                        </p>
+                        <p class="card-text">
+                            <small class="text text-secondary"></small>
+                            <%=roastery.lokasi%>
+                        </p>
+                        <a class="btn btn-primary" href="/roasters/<%=roastery._id%>">View <%=roastery.nama%></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%} %>
+            <script>
+                const mapToken = '<%= process.env.MAPBOX_TOKEN %>'
+                const roasteries = {features:<%- JSON.stringify(roasteries) %>}
+            </script>
+            <script src="/JS/clusterMap.js"></script>

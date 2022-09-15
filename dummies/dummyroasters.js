@@ -1,0 +1,35 @@
+module.exports.namakopi = [
+    "BTW",
+    "Sky Pasta",
+    "Sayan",
+    "Ngoboy",
+    "Kedai",
+    "Warkop",
+    "Rumah",
+    "Bermuda",
+    "Nako",
+    "Cilalula",
+    "Sava",
+    "Madi",
+    "Bersenyawa",
+    "Waktu Temu",
+    "Muya",
+    "Cracks",
+    "Kazmara"
+]
+
+module.exports.deskriptor = [
+    "Coffee Shop",
+    "Coffee",
+    "Space",
+    "Creative Space",
+    "Roaster",
+    "Roastery",
+    "Coffee Roaster",
+    "Coffee & Roastery",
+    "Coffee Shop & Roastery",
+    "Coffee Shop & Eatery",
+    "Eatery",
+    "Kopi",
+    "Cafe",
+]
